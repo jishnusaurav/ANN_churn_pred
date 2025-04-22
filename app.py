@@ -9,7 +9,7 @@ loss=tf.keras.losses.BinaryCrossentropy()
 loss
 
 # Load the trained model
-model = tf.keras.models.load_model('model.h5',loss=loss)
+model = tf.keras.models.load_model('model.h5',custom_objects={'my_loss': loss})
 
 # Load the encoders and scaler
 with open('label_encoder_gender.pkl', 'rb') as file:
